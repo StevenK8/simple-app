@@ -1,1 +1,4 @@
-<app-articles></app-articles>
+<!-- Message: {{message}} -->
+<app-navbar (messageEvent)="receiveMessage($event)"></app-navbar>
+<!-- <app-articles [childMessage]="message"></app-articles> -->
+<router-outlet></router-outlet>

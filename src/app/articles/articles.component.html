@@ -1,15 +1,10 @@
-<ul>
-    <!-- call ngOnClick -->
-    <!-- <li *ngFor="let article of this.articles" (click)="onSelect(article)">
-        <span class="badge">{{ article.id }}</span> {{ article.title }}
-        <button (click)="onDelete(article)">Delete</button>
-    </li> -->
-        
-    <app-article *ngFor="let article of articles" [article]="article">
-    </app-article>
+<form class="d-flex" role="search">
+  <input class="form-control me-2" type="search" placeholder="Search an article" aria-label="Search"
+    (input)="searchArticle($event)" (ngModelChange)="searchArticle">
+</form>
 
-  <!-- <li *ngFor="let article of this.articles()"> -->
-      
-    <!-- <app-article [title]="article.title" [customContent]="article.content"></app-article> -->
-  <!-- </li> -->
-</ul>
+<div class="container-md">
+    <app-article class="d-flex p-3" *ngFor="let article of articles " [article]="article"
+      (deleteArticle)="delete($event)" >
+    </app-article>
+</div>

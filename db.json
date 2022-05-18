@@ -3,20 +3,126 @@
     {
       "title": "My First Article",
       "content": "Hello World",
-      "author": "Orangefire",
+      "idauthor": 1,
       "id": 1
     },
     {
       "title": "Angular component",
       "content": "Angular component looks awesome!",
-      "author": "Orangefire",
+      "idauthor": 1,
       "id": 2
     },
     {
-      "title": "Angular service",
-      "content": "I read something about angular service, i will try it soon",
-      "author": "Orangefire",
+      "title": "test",
+      "content": "great",
+      "idauthor": 1,
       "id": 3
+    },
+    {
+      "title": "The best article",
+      "content": "It's a story",
+      "idauthor": 1,
+      "id": 4
+    },
+    {
+      "title": "testtest",
+      "content": "testtest",
+      "idauthor": 2,
+      "id": 6
+    },
+    {
+      "title": "What a day",
+      "content": "Let's get intop the news",
+      "idauthor": 2,
+      "id": 7
+    },
+    {
+      "title": "I need ten articles ",
+      "content": "In order to test the code",
+      "idauthor": 2,
+      "id": 8
+    },
+    {
+      "title": "This ain't working",
+      "content": "But it should",
+      "idauthor": 3,
+      "id": 9
+    },
+    {
+      "title": "Top 10 fruits",
+      "content": "the last one will surprise you",
+      "idauthor": 4,
+      "id": 10
+    },
+    {
+      "title": "Another one",
+      "content": "A few more will do",
+      "idauthor": 5,
+      "id": 11
+    },
+    {
+      "title": "Better caul saul S6 is out!",
+      "content": "Wtach it I guess",
+      "idauthor": 6,
+      "id": 12
+    },
+    {
+      "title": "The butterfly effect",
+      "content": "The butterfly effect is a phenomenon in which a person's thoughts and feelings are altered by the presence of a second person in their life.",
+      "idauthor": 6,
+      "id": 13
+    }
+  ],
+  "authors": [
+    {
+      "name": "Orangefire",
+      "biography": "Orangefire is a French indie rock band from Paris, formed in 2014. The band consists of three members: Thomas Lefebvre, Antoine Lefebvre and Antoine Lefebvre. The band is currently working on a new album.",
+      "id": 1
+    },
+    {
+      "name": "Garfield",
+      "biography": "Garfield is a cat",
+      "id": 2
+    },
+    {
+      "name": "Bryan",
+      "biography": "Bryan is a man",
+      "id": 3
+    },
+    {
+      "name": "Mama Tom",
+      "biography": "",
+      "id": 4
+    },
+    {
+      "name": "Kimmy",
+      "biography": "",
+      "id": 5
+    },
+    {
+      "name": "HBO",
+      "biography": "",
+      "id": 6
+    },
+    {
+      "name": "c",
+      "biography": "c",
+      "id": 7
+    },
+    {
+      "name": "aaaa",
+      "biography": "aaaaa",
+      "id": 8
+    },
+    {
+      "name": "dzadza",
+      "biography": "dzadza",
+      "id": 9
+    },
+    {
+      "name": "aaaa",
+      "biography": "aaaa",
+      "id": 10
     }
   ]
 }
