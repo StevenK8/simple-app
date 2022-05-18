@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
 import { ArticleService } from '../article.service';
 import { Article } from '../model/article';
 
@@ -15,17 +14,19 @@ export class ArticlesComponent implements OnInit {
   //   { title: 'My Third Article', content: 'Hello World' },
   // ];
 
-  articles!: Observable<Article[]>;
+  articles!: Article[];
   
   constructor(private articleService: ArticleService) {
   }
 
   ngOnInit() {
-    this.articles = this.articleService.getArticles();
+    this.articleService.getArticles().subscribe(articles => {this.articles = articles});
   }
 
-  ngOnClick(article: Article) {
-    this.articleService.deleteArticle(article.id);
+  ngOnDelete(article: Article) {
+    this.articleService.deleteArticle(article.id).subscribe(a => {
+      this.articles = this.articles.filter(a => a.id !== article.id);
+    });
   }
 
   // articles(): Article[] {

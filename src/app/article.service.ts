@@ -31,8 +31,8 @@ export class ArticleService {
     return this.http.get<Article[]>('http://localhost:3000/articles');
   }
 
-  public getArticle(id: number): Observable<Article> {
-    return this.http.get<Article>(`http://localhost:3000/articles/${id}`);
+  public getArticle(name: string): Observable<Article> {
+    return this.http.get<Article>(`http://localhost:3000/articles/${name}`);
   }
 
   public createArticle(article: Article): Observable<Article> {

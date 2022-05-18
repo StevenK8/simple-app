@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Article } from '../model/article';
 
 @Component({
   selector: 'app-article',
@@ -6,20 +7,25 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./article.component.css']
 })
 export class ArticleComponent implements OnInit {
-    
-  @Input()
-  title !: string;
-  @Input("customContent")
-  content !: string;
-  readonly author: string;
 
-  constructor(){
-    this.author = 'John Doe'; 
-  }
+  @Input()
+  article!: Article;
+    
+  @Output()
+  deleteArticle : EventEmitter<Article> = new EventEmitter();
+
+  @Output()
+  getAuthor : EventEmitter<Article> = new EventEmitter();
 
   ngOnInit(): void {
   }
 
-  
+  onDelete() {
+    this.deleteArticle.emit(this.article);
+  }
+
+  onGetAuthor() {
+    this.getAuthor.emit(this.article);
+  } 
 
 }

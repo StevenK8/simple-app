@@ -1,12 +1,13 @@
 <ul>
     <!-- call ngOnClick -->
-    <li *ngFor="let article of this.articles" (click)="onSelect(article)">
+    <!-- <li *ngFor="let article of this.articles" (click)="onSelect(article)">
         <span class="badge">{{ article.id }}</span> {{ article.title }}
         <button (click)="onDelete(article)">Delete</button>
-    </li>
+    </li> -->
         
-    <app-article *ngFor="let article of this.articles | async" [title]="article.title" [customContent]="article.content">
+    <app-article *ngFor="let article of articles" [article]="article">
     </app-article>
+
   <!-- <li *ngFor="let article of this.articles()"> -->
       
     <!-- <app-article [title]="article.title" [customContent]="article.content"></app-article> -->
