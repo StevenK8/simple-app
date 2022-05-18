@@ -1,4 +1,4 @@
 <div class="container-md">
-  <app-article (deleteArticle)="delete($event)" [article]="article">
+  <app-article *ngFor="let article of articles" (deleteArticle)="delete($event)" [article]="article">
   </app-article>
 </div>

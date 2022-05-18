@@ -11,12 +11,13 @@ import { Author } from '../model/author';
 })
 export class ArticleInfoComponent implements OnInit {
   @Input()
-  article!: Article;
-  
+  articles!: Article[];
+
+ 
   constructor(private route: ActivatedRoute, private router: Router, private articleService: ArticleService) {
     const id = parseInt(this.route.snapshot.paramMap.get('id') || '0');
     this.articleService.getSingleArticle(id).subscribe(a => {
-      this.article = a;
+      this.articles = [a];
     });
   }
 
